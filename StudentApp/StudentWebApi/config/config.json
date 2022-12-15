@@ -1,0 +1,7 @@
+{
+    "mysqlurl":"mysql://root:mYsQLpassWord@localhost:3306/",
+    "mysqldb":"studentdb",
+    "student":{
+        "table":"student"
+    }
+}
