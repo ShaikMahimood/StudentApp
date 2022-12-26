@@ -1,0 +1,17 @@
+.container-xxl{
+    margin: 5px;
+    border: 10px;
+    position: fixed;
+    top: 5%;
+    
+  }
+  button{
+    border-radius: 12px;
+    border-right: 20px;
+  }
+  div.parent{
+    left: 700px;
+    height: 0px;
+    width: 300px;
+  }
+  

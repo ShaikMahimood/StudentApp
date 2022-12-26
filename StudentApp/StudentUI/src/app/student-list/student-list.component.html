@@ -1,0 +1,90 @@
+<div class="container-xxl">
+    <h3>You Can See student Details Here!</h3>
+
+    <div class="border">
+        <div class="input-group mb-3">
+            <div>
+                <button routerLink="/add-edit-student" class="btn btn-md btn-primary">
+                    <i class="fa fa-user"></i>Add New Student
+                </button>
+            </div>
+            <br />
+            <div class="parent position-relative">
+                <input (keyup.enter)="getStudent($event)" class="form-control" placeholder="Search Student" #student
+                    autofocus />
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered table-responsive-xl">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <br />
+                <th>Name</th>
+                <br />
+                <th>Dob</th>
+                <br />
+                <th>TotalMarks</th>
+                <br />
+                <th>CGPA</th>
+                <br />
+                <th>Mobile</th>
+                <br />
+                <th>Address</th>
+                <br />
+                <th>Email</th>
+                <br />
+                <th>Course</th>
+                <br />
+                <th>GraduationYear</th>
+                <br />
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of studentData">
+                <td>{{ student.id }}</td>
+                <br />
+
+                <td>{{ student.name }}</td>
+                <br />
+
+                <td>{{ student.dob }}</td>
+                <br />
+
+                <td>{{ student.totalMarks }}</td>
+                <br />
+
+                <td>{{ student.cgpa }}</td>
+                <br />
+
+                <td>{{ student.mobile }}</td>
+                <br />
+
+                <td>{{ student.address }}</td>
+                <br />
+
+                <td>{{ student.email }}</td>
+                <br />
+
+                <td>{{ student.course }}</td>
+                <br />
+
+                <td>{{ student.graduationYear }}</td>
+                <br />
+
+                <td>
+                    <button routerLink="/student-details" class="btn btn-sm btn-info">
+                        <i class="fa fa-search"></i>Details
+                    </button>
+                    <button (click)="updateStudent(student.id)" class="btn btn-sm btn-warning">
+                        <i class="fa fa-edit"></i>Edit
+                    </button>
+                    <button (click)="openConfirmationDialog(student.id)" class="btn btn-sm btn-danger">
+                        <i class="fa fa-remove"></i>Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
